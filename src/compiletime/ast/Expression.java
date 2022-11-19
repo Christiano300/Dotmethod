@@ -1,5 +1,5 @@
 package compiletime.ast;
 
-public abstract class Expression<T> extends ASTNode {
-    public abstract T get();
+public interface Expression<T> {
+    T get() throws Exception;
 }

@@ -7,7 +7,7 @@ import java.math.BigInteger;
 import java.util.Objects;
 import java.util.function.BiFunction;
 
-public class Comparison extends Expression<Boolean> {
+public class Comparison extends LogicNode {
 
     private static final BiFunction<Number, Number, Boolean> greaterThan = (x, y) -> {
         if (x instanceof BigInteger && y instanceof BigInteger)
@@ -50,7 +50,7 @@ public class Comparison extends Expression<Boolean> {
     }
 
     @Override
-    public Boolean get() {
+    public Boolean get() throws Exception {
         return function.apply(number1.get(), number2.get());
     }
 }

@@ -1,7 +1,7 @@
 package compiletime.token;
 
 public class Token {
-    public TokenTypes type;
+    public final TokenTypes type;
 
     String data = null;
 

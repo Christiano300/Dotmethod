@@ -1,11 +1,12 @@
 package compiletime.ast.math;
 
+import compiletime.ast.ASTNode;
 import compiletime.ast.Expression;
 
 import java.util.Objects;
 import java.util.function.Function;
 
-public class MathOperation extends Expression<Number> {
+public class MathOperation extends ASTNode implements Expression<Number> {
     private final Expression<Number> number;
 
     private final Function<java.lang.Number, java.lang.Number> function;
@@ -20,7 +21,7 @@ public class MathOperation extends Expression<Number> {
     }
 
     @Override
-    public Number get() {
+    public Number get() throws Exception {
         Objects.requireNonNull(number);
         Number n = number.get();
         return function.apply(n);

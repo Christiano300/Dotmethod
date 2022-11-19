@@ -3,9 +3,11 @@ package compiletime.ast.math;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.MathContext;
+import java.math.RoundingMode;
 
 public class Mth {
     private static final MathContext mc = MathContext.DECIMAL64;
+    private static final RoundingMode rm = RoundingMode.HALF_UP;
 
     public static Number add(Number a, Number b) {
         Number result;
@@ -74,12 +76,12 @@ public class Mth {
     public static Number divide(Number a, Number b) {
         Number result;
         if (a instanceof BigDecimal)
-            result = ((BigDecimal) a).divide(new BigDecimal(a.toString()));
+            result = ((BigDecimal) a).divide(new BigDecimal(a.toString()), rm);
         else if (a instanceof BigInteger)
             result = ((BigInteger) a).divide(new BigInteger(a.toString()));
 
         else if (b instanceof BigDecimal)
-            result = ((BigDecimal) b).divide(new BigDecimal(a.toString()));
+            result = ((BigDecimal) b).divide(new BigDecimal(a.toString()), rm);
         else if (b instanceof BigInteger)
             result = ((BigInteger) b).divide(new BigInteger(a.toString()));
 

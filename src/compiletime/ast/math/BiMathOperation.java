@@ -1,14 +1,15 @@
 package compiletime.ast.math;
 
+import compiletime.ast.ASTNode;
 import compiletime.ast.Expression;
 
 import java.util.Objects;
 import java.util.function.BiFunction;
 
-public class BiMathOperation extends Expression<Number> {
+public class BiMathOperation extends ASTNode implements Expression<Number> {
+    public final BiFunction<Number, Number, Number> function;
     private final Expression<Number> number1;
     private final Expression<Number> number2;
-    public BiFunction<Number, Number, Number> function;
 
 
     private BiMathOperation(Expression<Number> number1, Expression<Number> number2, BiFunction<Number, Number, Number> function) {
@@ -37,7 +38,7 @@ public class BiMathOperation extends Expression<Number> {
         return new BiMathOperation(n1, n2, Mth::pow);
     }
 
-    public Number get() {
+    public Number get() throws Exception {
         Objects.requireNonNull(this.number1);
         Objects.requireNonNull(this.number2);
         java.lang.Number n1 = number1.get();

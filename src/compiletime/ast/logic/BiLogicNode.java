@@ -4,7 +4,7 @@ import compiletime.ast.Expression;
 
 import java.util.function.BinaryOperator;
 
-public class BiLogicNode extends Expression<Boolean> {
+public class BiLogicNode extends LogicNode {
     private final Expression<Boolean> value1;
     private final Expression<Boolean> value2;
 
@@ -28,7 +28,7 @@ public class BiLogicNode extends Expression<Boolean> {
         return new BiLogicNode(a, b, (x, y) -> x ^ y);
     }
 
-    public Boolean get() {
+    public Boolean get() throws Exception {
         return function.apply(value1.get(), value2.get());
     }
 }
