@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee89956e-89b0-4142-a933-624e6b0b866f" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compiletime/Code.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compiletime/Statement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compiletime/ast/io/Print.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compiletime/ast/io/Read.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compiletime/ast/logic/UnaryLogicNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compiletime/ast/var/Declare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compiletime/ast/var/Read.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compiletime/ast/var/VariableAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compiletime/ast/var/Write.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exceptions/runtime/VariableAlreadyExistsExceptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exceptions/runtime/VariableDoesntExistException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exceptions/runtime/WrongTypeException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ee89956e-89b0-4142-a933-624e6b0b866f" name="Changes" comment="VariableActions, io">
       <change beforePath="$PROJECT_DIR$/classes/production/Dotmethod/actions/Action.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/production/Dotmethod/actions/Arithmetic.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/production/Dotmethod/actions/Type$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/Dotmethod/actions/Type$1.class" afterDir="false" />
@@ -40,23 +24,6 @@
       <change beforePath="$PROJECT_DIR$/classes/production/Dotmethod/compiletime/token/TokenTypes.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/Dotmethod/compiletime/token/TokenTypes.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/production/Dotmethod/runtime/Variable$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/Dotmethod/runtime/Variable$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/production/Dotmethod/runtime/Variable.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/Dotmethod/runtime/Variable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/Action.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/Arithmetic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/Type.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/Variables.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compiletime/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compiletime/Lexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compiletime/LexerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compiletime/LexerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compiletime/Tokenizer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compiletime/ast/Expression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compiletime/ast/Expression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compiletime/ast/logic/BiLogicNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compiletime/ast/logic/BiLogicNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compiletime/ast/logic/Comparison.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compiletime/ast/logic/Comparison.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compiletime/ast/logic/LogicNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compiletime/ast/logic/LogicNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compiletime/ast/math/ASTNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compiletime/ast/math/ASTNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compiletime/ast/math/BiMathOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compiletime/ast/math/BiMathOperation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compiletime/ast/math/MathOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compiletime/ast/math/MathOperation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compiletime/ast/math/Mth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compiletime/ast/math/Mth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compiletime/token/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compiletime/token/Token.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/runtime/Variable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime/Variable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,23 +61,23 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "extract.method.default.visibility": "private",
-    "last_opened_file_path": "C:/Users/Christian/Desktop/Programmieren/Java/Normal/Dotmethod",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Christian/Desktop/Programmieren/Java/Normal/Dotmethod&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="compiletime" />
@@ -176,6 +143,7 @@
       <workItem from="1668779241496" duration="3174000" />
       <workItem from="1668790987059" duration="1142000" />
       <workItem from="1668873692352" duration="2705000" />
+      <workItem from="1668878427734" duration="517000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1667500008630</created>
@@ -184,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667500008630</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="VariableActions, io">
+      <created>1668878708871</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668878708871</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +190,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="VariableActions, io" />
+    <option name="LAST_COMMIT_MESSAGE" value="VariableActions, io" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
